@@ -1360,7 +1360,7 @@ declare namespace mathjs {
                 op?: string;
                 fn?: string;
                 args?: MathNode[];
-                type: string;
+                valueType: string;
                 name?: string;
                 value?: any;
 

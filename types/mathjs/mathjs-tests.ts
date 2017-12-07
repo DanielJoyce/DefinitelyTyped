@@ -597,7 +597,7 @@ var filtered = node.filter(function (node) {
 // returns an array with two entries: two SymbolNodes 'x'
 
 filtered.forEach(function (node) {
-  console.log(node.type, node.toString())
+  console.log(node.valueType, node.toString())
 });
 // outputs:
 //  SymbolNode x
@@ -609,12 +609,12 @@ console.log();
 console.log('Traverse the expression tree of expression "3 * x + 2"');
 var node1 = math.parse('3 * x + 2');
 node1.traverse(function (node, path, parent) {
-  switch (node.type) {
-    // case 'OperatorNode': console.log(node.type, node.op);    break;
-    case 'OperatorNode': console.log(node.type);             break;//for now removing .op
-    case 'ConstantNode': console.log(node.type, node.value); break;
-    case 'SymbolNode':   console.log(node.type, node.name);  break;
-    default:             console.log(node.type);
+  switch (node.valueType) {
+    // case 'OperatorNode': console.log(node.valueType, node.op);    break;
+    case 'OperatorNode': console.log(node.valueType);             break;//for now removing .op
+    case 'ConstantNode': console.log(node.valueType, node.value); break;
+    case 'SymbolNode':   console.log(node.valueType, node.name);  break;
+    default:             console.log(node.valueType);
   }
 });
 // outputs:
